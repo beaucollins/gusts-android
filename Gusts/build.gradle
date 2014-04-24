@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.+'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'http://automattic.github.io/gravatar-android' }
+}
+
+apply plugin: 'android'
+
+version "1.0"
+
+android {
+  compileSdkVersion 19
+  buildToolsVersion '19.0.3'
+
+  dependencies {
+    compile 'com.automattic:volley:4.5.1'
+  }
+
+  defaultConfig {
+    packageName "com.beaucollins.gusts"
+    versionName project.version
+    versionCode 1
+    minSdkVersion 15
+    targetSdkVersion 19
+  }
+
+
+}
